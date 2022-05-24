@@ -1,0 +1,25 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block header %}
+    <h3><a herf="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></h3>
+{% endblock header %}
+{% load bootstrap3 %}
+
+{% block content %}
+    <div class='container'>
+        <h6>.</h6>
+        <h4>编辑此条记录</h4>
+        <h6>.</h6>
+
+        <form action="{% url 'learning_logs:edit_entry' entry.id %}" method='post'>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <h6>.</h6>
+            {% buttons %}
+                <button class='btn btn-primary' name='submit'>保存更改</button>
+            {% endbuttons %}
+        </form>
+
+    </div>
+
+{% endblock content %}

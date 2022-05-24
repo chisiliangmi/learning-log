@@ -1,0 +1,17 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block content %}
+
+    {% if form.errors %}
+    <p>用户名和密码不匹配，请再试一次！</p>
+    {% endif %}
+
+    <form action="{% url 'users:logout' %}" method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    
+    <button name='submit'>退出登陆</button>
+    <input type='hidden' name='next' value="{% url 'learning_logs:index' %}"/>
+    </form>
+
+{% endblock content %}
