@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-b%t^iuci6w6be+p6g5gx@&$18n*vqcdjw*ed)$2v_x@b^2tri6
 # 部署在服务器上之后不向用户显示错误消息
 DEBUG = False
 # 只允许heroku托管项目
-ALLOWED_HOSTS = ['learning-log.herokuapp.com']
+ALLOWED_HOSTS = ['learning-logg.herokuapp.com']
 
 
 # Application definition
