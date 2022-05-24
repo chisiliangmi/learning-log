@@ -28,7 +28,6 @@ DEBUG = False
 # 只允许heroku托管项目
 ALLOWED_HOSTS = ['learning-loggss.herokuapp.com']
 
-
 # Application definition
 
 INSTALLED_APPS = [
