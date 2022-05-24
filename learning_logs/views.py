@@ -1,5 +1,4 @@
 # 导入django自带模块
-from tkinter import N
 from django.shortcuts import render
 from django.http import Http404, HttpResponseRedirect
 from django.urls import reverse
